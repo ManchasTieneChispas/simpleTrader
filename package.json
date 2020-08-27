@@ -1,0 +1,22 @@
+{
+  "name": "simpletrader",
+  "version": "1.0.0",
+  "description": "A simple trading bot using finnhub.io API",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ManchasTieneChispas/simpleTrader.git"
+  },
+  "author": "William Giraldo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ManchasTieneChispas/simpleTrader/issues"
+  },
+  "homepage": "https://github.com/ManchasTieneChispas/simpleTrader#readme",
+  "dependencies": {
+    "finnhub": "^1.2.1"
+  }
+}
