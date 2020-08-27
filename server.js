@@ -1,7 +1,9 @@
 const finnhub = require("finnhub");
 
+const key = require("./config/key");
+
 const api_key = finnhub.ApiClient.instance.authentications["api_key"];
-api_key.apiKey = "bt3inhv48v6tmkkuseog";
+api_key.apiKey = key;
 const finnhubClient = new finnhub.DefaultApi();
 
 // Stock candles
