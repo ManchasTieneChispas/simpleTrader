@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/ManchasTieneChispas/simpleTrader#readme",
   "dependencies": {
-    "finnhub": "^1.2.1"
+    "finnhub": "^1.2.1",
+    "ws": "^7.3.1"
   }
 }
