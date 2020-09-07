@@ -14,6 +14,7 @@ class Single {
     this.money = money;
     this.data = {};
     this.stock = stock;
+    this.sma = {};
 
     // Create WebSocket connection
     const WebSocket = require("ws");
@@ -35,19 +36,38 @@ class Single {
       } else {
         console.log("No Data");
       }
-
-      // console.log(this);
     });
+  }
+
+  currentTime() {
+    Math.floor(+new Date() / 1000);
   }
 
   price() {
     return this.data.p;
   }
 
-  run() {
-    let int = setInterval(() => {
-      console.log(this.price());
-    }, 1000);
+  run(finnhubClient) {
+    let int = setInterval(
+      (client) => {
+        console.log(this.price());
+
+        // get SMA value
+        client.technicalIndicator(
+          this.stock,
+          "1",
+          currentTime() - 1,
+          currentTime(),
+          "sma",
+          9,
+          (error, data, response) => {
+            console.log(data);
+          }
+        );
+      },
+      1000,
+      finnhubClient
+    );
   }
 
   done() {
